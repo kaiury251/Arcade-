@@ -1,0 +1,26 @@
+{
+  "name": "arcade-3-em-1",
+  "version": "1.0.0",
+  "description": "Flappy Bird, Pong e Tetris em um só app",
+  "main": "main.js",
+  "author": "Arcade",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --linux AppImage"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.arcade.tresemum",
+    "productName": "Arcade3em1",
+    "files": ["main.js", "index.html", "game.js"],
+    "linux": {
+      "target": "AppImage",
+      "category": "Game",
+      "artifactName": "Arcade3em1-${version}.AppImage"
+    }
+  }
+}
